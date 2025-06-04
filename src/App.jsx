@@ -7,6 +7,7 @@ import Hero from "./coponents/hero";
 import About from "./coponents/about";
 import Gallery from "./coponents/gallery";
 import Contact from "./coponents/contact";
+import Review from "./coponents/review";
 
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
       <About/>
       <Gallery/>
       <Contact/>
+      <Review/>
       <div className="App">
         <h1>{helloMessage}</h1> {/* This will display the text from Sanity */}
         <p>This text is fetched directly from your Sanity CMS!</p>

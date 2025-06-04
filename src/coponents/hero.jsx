@@ -6,7 +6,7 @@ const Hero = ()=>{
         </video>
         <div className="heroContent">
           <h2>Your vision, our ink</h2>
-          <p>your vision, our ink</p>
+          <p>Located in Los Angeles</p>
         </div>
       </section>
     );
