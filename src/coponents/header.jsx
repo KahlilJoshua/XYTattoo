@@ -6,10 +6,12 @@ const Header = () => {
   const handleToggle = () => {
     setIsToggled(!isToggled)
     if(isToggled != true){
-      asideRef.current.style.right = "0%"
+      asideRef.current.style.transform = "translateX(0px)";
+      document.querySelector("body").style.overflow = "hidden";
     }
     else{
-      asideRef.current.style.right = "100%";
+      asideRef.current.style.transform = "translateX(100%)";
+      document.querySelector("body").style.overflow = "auto";
     }
   };
     return (
@@ -38,7 +40,7 @@ const Header = () => {
         <aside className="sideNav">
           <section className="asideWrapper" ref={asideRef}>
             <nav>
-              <ul>
+              <ul className="asideListWrapper">
                 <li>
                   <a href="">Gallery</a>
                 </li>

@@ -4,6 +4,10 @@ import Header from "./coponents/header"
 import { useEffect, useState } from 'react';
 import { client } from './sanity'; // Only need 'client' for this example
 import Hero from "./coponents/hero";
+import About from "./coponents/about";
+import Gallery from "./coponents/gallery";
+import Contact from "./coponents/contact";
+
 
 function App() {
   const [helloMessage, setHelloMessage] = useState('Loading...'); // Default message
@@ -33,9 +37,12 @@ function App() {
   if (error) return <div>{error}</div>;
 
   return (
-    <main>
+    <>
       <Header/>
       <Hero/>
+      <About/>
+      <Gallery/>
+      <Contact/>
       <div className="App">
         <h1>{helloMessage}</h1> {/* This will display the text from Sanity */}
         <p>This text is fetched directly from your Sanity CMS!</p>
@@ -48,7 +55,7 @@ function App() {
       )}
       */}
       </div>
-    </main>
+    </>
   );
 }
 
