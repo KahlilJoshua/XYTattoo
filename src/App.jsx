@@ -8,6 +8,7 @@ import About from "./coponents/about";
 import Gallery from "./coponents/gallery";
 import Contact from "./coponents/contact";
 import Review from "./coponents/review";
+import Footer from "./coponents/footer";
 
 
 function App() {
@@ -45,6 +46,7 @@ function App() {
       <Gallery/>
       <Contact/>
       <Review/>
+      <Footer/>
       <div className="App">
         <h1>{helloMessage}</h1> {/* This will display the text from Sanity */}
         <p>This text is fetched directly from your Sanity CMS!</p>
@@ -57,6 +59,7 @@ function App() {
       )}
       */}
       </div>
+      
     </>
   );
 }

@@ -1,4 +1,7 @@
+import { useRef } from "react";
+
 const Contact = ()=>{
+    const inputRef = useRef(null)
     return (
       <section className="contact">
         <div className="imageContainer">
@@ -26,6 +29,13 @@ const Contact = ()=>{
             <h4>3. Book time for the tattoo</h4>
             <p>mda mwp aowdm oawd a dawknd akmwd d awmod aw. (dnwd 1-3)</p>
           </div>
+          <div className="contactField">
+            <h4>Tell us about ur tattoo</h4>
+            <input className="inputMessage" type="text" ref={inputRef}/>
+            <button className="submitButton">
+                Submit
+            </button>
+           </div>
         </article>
       </section>
     );

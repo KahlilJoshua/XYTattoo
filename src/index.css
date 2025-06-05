@@ -1,3 +1,6 @@
+.App{
+  display: none;
+}
 *{
   margin: 0px;
   padding: 0px;
@@ -256,9 +259,118 @@ header > nav > ul{
 .contactText > h3{
   font-size: 45px;
 }
+.inputMessage{
+  width: 500px;
+  height: 200px;
+  border-radius: 5px;
+  font-family: "Montserrat", sans-serif;
+}
+.contactField{
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.submitButton{
+  font-size: 24px;
+  width: max-content;
+  padding: 10px;
+  font-family: "Montserrat", sans-serif;
+  background-color: #2b2b7e;
+  border-radius: 5%;
+  color: white;
+  border: none;
+  outline: none;
+
+}
 /*Review section*/
 .reviewSection{
   background-image: url('src/img/reviewb.jpg');
   width: 100%;
-  height: 1000px;
+  padding: 100px 0px 100px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 4;
+}
+.reviewContainer{
+  background-color: rgb(255, 255, 255);
+  height: 400px;
+  width: 800px;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  border-radius: 15px;
+}
+.leftClick{
+  width: 50%;
+  position: absolute;
+  height: 100%;
+  z-index: 4;
+}
+.rightClick{
+  width: 50%;
+  position: absolute;
+  margin-left: 50%;
+  height: 100%;
+  z-index: 4;
+}
+.allReviews{
+  transition: 1s;
+  position:absolute;
+  width: 400%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+.review{
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.stars{
+  display: flex;
+  gap: 10px;
+}
+.stars > img{
+  width: 40px;
+}
+.review > h4{
+  font-size: 30px;
+}
+/*Footer*/
+footer{
+  width: 100%;
+}
+.upper{
+  width: 100%;
+  padding: 20px 0px 20px 0px;
+  background-color: black;
+  color: white;
+  gap: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lower{
+  padding: 10px 0px 10px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: grey;
+}
+.socails{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  gap: 10px;
+}
+.socails > img{
+  width: 30px;
+  
 }
