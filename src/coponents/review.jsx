@@ -13,7 +13,7 @@ const Review = () => {
   }, [page]);
 
   const back = () => {
-    if (page >= 0) {
+    if (page > 0) {
       pageSelector(page - 1);
       console.log(page);
       setReview();
@@ -21,7 +21,7 @@ const Review = () => {
   };
 
   const forward = () => {
-    if (page <= 3) {
+    if (page < 3) {
       pageSelector(page + 1);
       console.log(page);
       setReview();
@@ -48,12 +48,12 @@ const Review = () => {
   return (
     <section className="reviewSection">
       <div className="reviewContainer">
-        <div onClick={back} className="leftClick"></div>
-        <div onClick={forward} className="rightClick"></div>
+        <div onClick={back} className="leftClick"><img  src="src/img/rightArrow.webp" alt="" /></div>
+        <div onClick={forward} className="rightClick"><img  src="src/img/rightArrow.webp" alt="" /></div>
         <div className="allReviews" ref={reviewRef}>
           <div className="review">
             <h4>Google Review</h4>
-            <p>bla bal bla bla</p>
+            <p>First tattoo ever and got it done yesterday! I’m very HAPPY with the design and outcome of my tattoo</p>
             <div className="stars">
               <img src="src/img/star.png" alt="star" />
               <img src="src/img/star.png" alt="star" />
@@ -64,7 +64,18 @@ const Review = () => {
           </div>
           <div className="review">
             <h4>Google Review</h4>
-            <p>bla bal bla bla</p>
+            <p>Highly recommended artist! Very satisfied with the outcome of my tatts, salute to you Xy! Till next time</p>
+            <div className="stars">
+              <img src="src/img/star.png" alt="star" />
+              <img src="src/img/star.png" alt="star" />
+              <img src="src/img/star.png" alt="star" />
+              <img src="src/img/star.png" alt="star" />
+              <img src="src/img/star.png" alt="star" />
+            </div>
+          </div>
+          <div className="review">
+            <h4>Yelp Review</h4>
+            <p>By far my favorite tattoo and Xyborg once again astounded me with his precision, line work and patience</p>
             <div className="stars">
               <img src="src/img/star.png" alt="star" />
               <img src="src/img/star.png" alt="star" />
@@ -75,18 +86,7 @@ const Review = () => {
           </div>
           <div className="review">
             <h4>Google Review</h4>
-            <p>bla bal bla bla</p>
-            <div className="stars">
-              <img src="src/img/star.png" alt="star" />
-              <img src="src/img/star.png" alt="star" />
-              <img src="src/img/star.png" alt="star" />
-              <img src="src/img/star.png" alt="star" />
-              <img src="src/img/star.png" alt="star" />
-            </div>
-          </div>
-          <div className="review">
-            <h4>Google Review</h4>
-            <p>bla bal bla bla</p>
+            <p>Just got a vines tattoo from this place and I'm obsessed. It flows so naturally and the detail is insane like, every tiny leaf is perfect.</p>
             <div className="stars">
               <img src="src/img/star.png" alt="star" />
               <img src="src/img/star.png" alt="star" />

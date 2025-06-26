@@ -9,6 +9,7 @@ import Gallery from "./coponents/gallery";
 import Contact from "./coponents/contact";
 import Review from "./coponents/review";
 import Footer from "./coponents/footer";
+import Artist from "./coponents/artist";
 
 
 function App() {
@@ -34,15 +35,15 @@ function App() {
         console.error("Failed to fetch hello text from Sanity:", err);
         setError("Error fetching data from Sanity. Check console for details.");
       });
-  }, []); // Run once on component mount
+  }, []);
 
-  if (error) return <div>{error}</div>;
 
   return (
     <>
       <Header/>
       <Hero/>
       <About/>
+      <Artist/>
       <Gallery/>
       <Contact/>
       <Review/>
