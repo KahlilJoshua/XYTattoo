@@ -66,7 +66,7 @@ const Header = () => {
       <header className={isScrolled ? "headerScrolled" : ""}>
         <div className="logo">
           <img
-            src="./src/img/logo.png"
+            src="./img/logo.png"
             alt="XY-Logo"
             className="logoImage"
             onClick={() => {
@@ -91,7 +91,7 @@ const Header = () => {
             <img
               onClick={handleToggle}
               className="burger"
-              src="./src/img/burger.svg"
+              src="./img/burger.svg"
               alt="burger"
             />
           </ul>

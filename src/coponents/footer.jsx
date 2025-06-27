@@ -12,7 +12,7 @@ const Footer = () => {
         </div>
         <div className="socails">
           <p>Follow us:</p>
-          <a href="https://www.instagram.com/xytattoostudio/"><img src="src/img/insta.webp" alt=""/></a>
+          <a href="https://www.instagram.com/xytattoostudio/"><img src="./img/insta.webp" alt=""/></a>
         </div>
       </div>
       <div className="lower">'

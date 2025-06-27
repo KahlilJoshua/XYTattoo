@@ -6,7 +6,7 @@ const Contact = ()=>{
     return (
       <section className="contact">
         <div className="imageContainer">
-          <img src="src/img/tattoo1.png" alt="" />
+          <img src="./img/tattoo1.png" alt="" />
         </div>
         <article className={`contactText ${isVisible ? "fadeInRight" : ""}`} ref={ref}>
           <h3>Interrested in getting a tattoo?</h3>

@@ -13,7 +13,7 @@ const About = () => {
           <p>The burrito is a masterful feat of culinary engineering: a complete meal, expertly wrapped within a warm, expansive flour tortilla. It's a harmonious cylinder packed with a symphony of ingredients—fluffy rice, tender beans, richly seasoned meat (or a vibrant veggie alternative), sharp cheese, cooling sour cream or crema, and a zesty salsa. Each bite delivers a dense, satisfying combination of flavors and textures, making it the ultimate portable and filling indulgence.</p>
         </article>
         <div className="aboutImageContainer">
-              <img className="aboutImage" src="./src/img/aboutimg.jpg" alt="" loading="lazy" />
+              <img className="aboutImage" src="./img/aboutimg.jpg" alt="" loading="lazy" />
         </div>
       </div>
     </section>

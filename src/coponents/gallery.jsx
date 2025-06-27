@@ -30,15 +30,15 @@ const Gallery = ()=>{
               onMouseLeave={playAnimation}
               onMouseUp={playAnimation}
             >
-              <img src="src/img/tattoo4.webp" alt="" loading="lazy" />
-              <img src="src/img/tattoo3.webp" alt="" loading="lazy" />
-              <img src="src/img/tattoo1.png" alt="" loading="lazy" />
-              <img src="src/img/tattoo4.webp" alt="" loading="lazy" />
-              <img src="src/img/tattoo3.webp" alt="" loading="lazy" />
-              <img src="src/img/tattoo1.png" alt="" loading="lazy" />
-              <img src="src/img/tattoo4.webp" alt="" loading="lazy" />
-              <img src="src/img/tattoo3.webp" alt="" loading="lazy" />
-              <img src="src/img/tattoo1.png" alt="" loading="lazy" />
+              <img src="./img/tattoo4.webp" alt=""  />
+              <img src="./img/tattoo3.webp" alt=""  />
+              <img src="./img/tattoo1.png" alt=""  />
+              <img src="./img/tattoo4.webp" alt=""  />
+              <img src="./img/tattoo3.webp" alt=""  />
+              <img src="./img/tattoo1.png" alt=""  />
+              <img src="./img/tattoo4.webp" alt=""  />
+              <img src="./img/tattoo3.webp" alt=""  />
+              <img src="./img/tattoo1.png" alt=""  />
             </div>
           </div>
           <div className="scroller">
@@ -52,15 +52,15 @@ const Gallery = ()=>{
               onMouseLeave={playAnimation2}
               onMouseUp={playAnimation2}
             >
-              <img src="src/img/tattoo4.webp" alt="" loading="lazy" />
-              <img src="src/img/tattoo3.webp" alt="" loading="lazy" />
-              <img src="src/img/tattoo1.png" alt="" loading="lazy" />
-              <img src="src/img/tattoo4.webp" alt="" loading="lazy" />
-              <img src="src/img/tattoo3.webp" alt="" loading="lazy" />
-              <img src="src/img/tattoo1.png" alt="" loading="lazy" />
-              <img src="src/img/tattoo4.webp" alt="" loading="lazy" />
-              <img src="src/img/tattoo3.webp" alt="" loading="lazy" />
-              <img src="src/img/tattoo1.png" alt="" loading="lazy" />
+              <img src="./img/tattoo4.webp" alt=""  />
+              <img src="./img/tattoo3.webp" alt=""  />
+              <img src="./img/tattoo1.png" alt=""  />
+              <img src="./img/tattoo4.webp" alt=""  />
+              <img src="./img/tattoo3.webp" alt=""  />
+              <img src="./img/tattoo1.png" alt=""  />
+              <img src="./img/tattoo4.webp" alt=""  />
+              <img src="./img/tattoo3.webp" alt=""  />
+              <img src="./img/tattoo1.png" alt=""  />
             </div>
           </div>
         </div>
