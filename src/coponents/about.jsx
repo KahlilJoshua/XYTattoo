@@ -1,19 +1,53 @@
 import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
+import { useSanityDocument } from "../hooks/useSanityDocument";
+import { urlFor } from "../sanity";
 const About = () => {
   const [ref, isVisible] = useIntersectionObserver();
+
+  //gets data from sanity on mount
+  const {
+    data: imagesData,
+    loading: imagesLoading,
+    error: imagesError,
+  } = useSanityDocument(
+    `*[_type == "siteImages"][0]{image1}`
+  );
+
+  const { data, loading, error } = useSanityDocument(
+    `*[_type == "siteSettings"][0]{aboutText1, aboutText2}`
+  );
+
+  const aboutImageUrl = imagesError
+    ? "https://placehold.co/400x300?text=Image+Error"
+    : imagesLoading
+    ? "https://placehold.co/400x300?text=Loading+Image..."
+    : imagesData?.image1
+    ? urlFor(imagesData.image1).width(400).url()
+    : "https://placehold.co/400x300?text=Image+Missing";
+
+
   return (
     <section className="about">
       <h3>About us</h3>
       <div className="aboutWrapper">
-        <article className={`${isVisible ? 'fadeInLeft' : ''}`} ref={ref}>
+        <article className={`${isVisible ? "fadeInLeft" : ""}`} ref={ref}>
           <h4>Our story</h4>
-          <p>Tacos are pure joy in a tortilla. A perfect handheld meal, they combine savory meats, fresh veggies, vibrant salsas, and creamy toppings. Each bite offers a delightful crunch and burst of flavor, celebrating simple, satisfying perfection.</p>
+          <p>
+            {error ? "Error loading text." : data?.aboutText1 || "Loading..."}
+          </p>
           <br />
           <h4>Tattoo good</h4>
-          <p>The burrito is a masterful feat of culinary engineering: a complete meal, expertly wrapped within a warm, expansive flour tortilla. It's a harmonious cylinder packed with a symphony of ingredients—fluffy rice, tender beans, richly seasoned meat (or a vibrant veggie alternative), sharp cheese, cooling sour cream or crema, and a zesty salsa. Each bite delivers a dense, satisfying combination of flavors and textures, making it the ultimate portable and filling indulgence.</p>
+          <p>
+            {error ? "Error loading text." : data?.aboutText2 || "Loading..."}
+          </p>
         </article>
         <div className="aboutImageContainer">
-              <img className="aboutImage" src="./img/aboutimg.jpg" alt="" loading="lazy" />
+          <img
+            className="aboutImage"
+            src={aboutImageUrl}
+            alt=""
+            loading="lazy"
+          />
         </div>
       </div>
     </section>

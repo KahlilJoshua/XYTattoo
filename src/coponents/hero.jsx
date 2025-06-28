@@ -7,9 +7,9 @@ const Hero = () => {
   const [ref, isVisible] = useIntersectionObserver();
   //gets data from sanity on mount
   const { data, loading, error } = useSanityDocument(
-    `*[_type == "siteSettings"][0]{helloText}`
+    `*[_type == "siteSettings"][0]{slogan}`
   );
-  console.log(data)
+  
   return (
     <section className="hero">
       <video autoPlay loop playsInline muted className="videoBackground">
@@ -17,7 +17,7 @@ const Hero = () => {
       </video>
       <div className={`heroContent ${isVisible ? "fadeIn" : ""}`} ref={ref}>
         <h2>
-          {error ? "Error loading text." : data?.helloText || "Loading..."}
+          {error ? "Error loading text." : data?.slogan || "Loading..."}
         </h2>
         <p>Located in Los Angeles</p>
       </div>
