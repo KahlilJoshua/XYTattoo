@@ -64,28 +64,28 @@ const Header = () => {
   return (
     <>
       <header className={isScrolled ? "headerScrolled" : ""}>
-        <div className="logo">
-          <img
-            src="./img/logo.png"
-            alt="XY-Logo"
-            className="logoImage"
-            onClick={() => {
-              window.scrollTo({ top: 0, behavior: "smooth" });
-            }}
-          />
+        <div
+          className="logo"
+          onClick={() => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
+        >
+          <img src="./img/logo.png" alt="XY-Logo" className="logoImage" />
           <h1 className="logoText">Tattoo Studio</h1>
         </div>
         <nav>
           <ul className="headerUl">
-            <li>
+            <li
+              onClick={() => {
+                document.querySelector('.gallery').scrollIntoView({behavior:'smooth'})
+              }}
+            >
               <a>Gallery</a>
             </li>
-            <li>
-              <a onClick={()=>{}}>
-                About us
-              </a>
+            <li onClick={()=>{document.querySelector('.about').scrollIntoView({behavior:'smooth'})}}>
+              <a>About us</a>
             </li>
-            <li>
+            <li onClick={()=>{document.querySelector('.contact').scrollIntoView({behavior:'smooth'})}}>
               <a>Contact</a>
             </li>
             <img
@@ -102,14 +102,20 @@ const Header = () => {
         <section className="asideWrapper" ref={asideRef} onClick={handleToggle}>
           <nav>
             <ul className="asideListWrapper">
-              <li>
-                <a href="">Gallery</a>
+              <li onClick={()=>{document.querySelector('.gallery').scrollIntoView({behavior:'smooth'})}}>
+                <a>Gallery</a>
               </li>
-              <li>
-                <a href="">About us</a>
+              <li onClick={()=>{document.querySelector('.artisSection').scrollIntoView({behavior:'smooth'})}}>
+                <a>Artists</a>
               </li>
-              <li>
-                <a href="">Contact</a>
+              <li onClick={()=>{document.querySelector('.reviewSection').scrollIntoView({behavior:'smooth'})}}>
+                <a>Reviews</a>
+              </li>
+              <li onClick={()=>{document.querySelector('.about').scrollIntoView({behavior:'smooth'})}}>
+                <a>About us</a>
+              </li>
+              <li onClick={()=>{document.querySelector('.contact').scrollIntoView({behavior:'smooth'})}}>
+                <a>Contact</a>
               </li>
             </ul>
           </nav>
