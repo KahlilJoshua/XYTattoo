@@ -187,6 +187,7 @@ header > nav > ul {
   align-items: center;
 }
 .heroContent {
+  opacity: 0;
   color: white;
   z-index: 1;
   text-align: center;
@@ -232,6 +233,7 @@ header > nav > ul {
   max-width: 600px;
   display: flex;
   flex-direction: column;
+  opacity: 0;
 }
 .aboutImage {
   border-radius: 10%;
@@ -263,11 +265,10 @@ header > nav > ul {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
-.artist {
+.artist, .artist1, .artist2, .artist3 {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url("/img/artist1.jpg");
   margin-bottom: 20px;
   width: 500px;
   height: 500px;
@@ -275,8 +276,31 @@ header > nav > ul {
   flex-direction: column;
   justify-content: flex-end;
 }
+.artist{
+    background-image: url("/img/aboutimg.jpg");
+}
+.artist1{
+    background-image: url("/img/harold.jpg");
+}
+.artist2{
+    background-image: url("/img/artist1.jpg");
+}
+.artist3{
+    background-image: url("/img/artist1.jpg");
+}
+.artist::before,.artist1::before, .artist2::before, .artist3::before {
+  content: "";
+  position: relative;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
 .artistText {
-  padding: 15px;
+    position: absolute;
+    padding: 15px;
+    z-index: 2;
 }
 
 /*Gallery*/
@@ -311,12 +335,12 @@ header > nav > ul {
 }
 .innerScroller1 {
   display: flex;
-  animation: scrollR 20s linear infinite;
+  animation: scrollR 35s linear infinite;
   gap: 10px;
 }
 .innerScroller2 {
   display: flex;
-  animation: scrollL 20s linear infinite;
+  animation: scrollL 35s linear infinite;
   gap: 10px;
 }
 
@@ -325,12 +349,12 @@ header > nav > ul {
     transform: translateX(0px);
   }
   to {
-    transform: translateX(-930px);
+    transform: translateX(-1230px);
   }
 }
 @keyframes scrollL {
   from {
-    transform: translateX(-930px);
+    transform: translateX(-1230px);
   }
   to {
     transform: translateX(0px);
@@ -341,12 +365,12 @@ header > nav > ul {
     transform: translateX(0px);
   }
   to {
-    transform: translateX(-630px);
+    transform: translateX(-930px);
   }
 }
 @keyframes scrollL2 {
   from {
-    transform: translateX(-630px);
+    transform: translateX(-930px);
   }
   to {
     transform: translateX(0px);
@@ -386,6 +410,7 @@ header > nav > ul {
   width: 100%;
 }
 .contactText {
+  opacity: 0;
   max-width: 550px;
   padding: 50px 30px 50px 20px;
   display: flex;
@@ -572,7 +597,7 @@ footer {
   }
 }
 @media (max-width: 1100px) {
-  .artist {
+  .artist, .artist1, .artist2, .artist3 {
     width: 100%;
     height: 400px;
   }
@@ -629,7 +654,7 @@ footer {
   .number > a {
     font-size: 20px;
   }
-  .artist {
+  .artist, .artist1, .artist2, .artist3 {
     height: 300px;
   }
   p {
@@ -647,10 +672,10 @@ footer {
 }
 @media (max-width: 800px) {
   .innerScroller1 {
-    animation: scrollR2 20s linear infinite;
+    animation: scrollR2 30s linear infinite;
   }
   .innerScroller2 {
-    animation: scrollL2 20s linear infinite;
+    animation: scrollL2 30s linear infinite;
   }
 
   .innerScroller1 > img,

@@ -5,7 +5,7 @@ const Contact = ()=>{
     const [ref, isVisible] = useIntersectionObserver();
     const inputRef = useRef(null)
     const { data, loading, error } = useSanityDocument(
-      `*[_type == "siteSettings"][0]{contact1, contact2, contact3}`
+      `*[_type == "siteSettings"][0]{contact1, contact2, contact3, contactTitle, contactTitle2, contactTitle3}`
     );
     return (
       <section className="contact">
@@ -15,15 +15,15 @@ const Contact = ()=>{
         <article className={`contactText ${isVisible ? "fadeInRight" : ""}`} ref={ref}>
           <h3>Interrested in getting a tattoo?</h3>
           <div>
-            <h4>1. First bring up your idea</h4>
+            <h4>{error ? "Error loading text." : data?.contactTitle || "Loading..."}</h4>
             <p>{error ? "Error loading text." : data?.contact1 || "Loading..."}</p>
           </div>
           <div>
-            <h4>2. We'll get back with a price estimate and design</h4>
+            <h4>{error ? "Error loading text." : data?.contactTitle2 || "Loading..."}</h4>
             <p>{error ? "Error loading text." : data?.contact2 || "Loading..."}</p>
           </div>
           <div>
-            <h4>3. Book time for the tattoo</h4>
+            <h4>{error ? "Error loading text." : data?.contactTitle3 || "Loading..."}</h4>
             <p>{error ? "Error loading text." : data?.contact3 || "Loading..."}</p>
           </div>
           <div className="number">
