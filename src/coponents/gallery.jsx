@@ -86,11 +86,11 @@ const Gallery = () => {
             <img src={allImageUrls[8]} alt="tatto" />
             <img src={allImageUrls[5]} alt="tatto" />
             <img src={allImageUrls[6]} alt="tatto" />
-            <img src={allImageUrls[7]} alt="tatto" />
+            <img src={allImageUrls[9]} alt="tatto" />
             <img src={allImageUrls[8]} alt="tatto" />
             <img src={allImageUrls[5]} alt="tatto" />
             <img src={allImageUrls[6]} alt="tatto" />
-            <img src={allImageUrls[7]} alt="tatto" />
+            <img src={allImageUrls[9]} alt="tatto" />
             <img src={allImageUrls[8]} alt="tatto" />
 
           </div>

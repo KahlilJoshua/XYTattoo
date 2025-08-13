@@ -266,6 +266,7 @@ header > nav > ul {
   grid-template-columns: repeat(2, 1fr);
 }
 .artist, .artist1, .artist2, .artist3 {
+  position: relative;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -349,12 +350,12 @@ header > nav > ul {
     transform: translateX(0px);
   }
   to {
-    transform: translateX(-1230px);
+    transform: translateX(-1240px);
   }
 }
 @keyframes scrollL {
   from {
-    transform: translateX(-1230px);
+    transform: translateX(-1240px);
   }
   to {
     transform: translateX(0px);
@@ -365,12 +366,12 @@ header > nav > ul {
     transform: translateX(0px);
   }
   to {
-    transform: translateX(-930px);
+    transform: translateX(-840px);
   }
 }
 @keyframes scrollL2 {
   from {
-    transform: translateX(-930px);
+    transform: translateX(-840px);
   }
   to {
     transform: translateX(0px);

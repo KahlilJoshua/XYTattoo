@@ -36,7 +36,7 @@ const About = () => {
             {error ? "Error loading text." : data?.aboutText1 || "Loading..."}
           </p>
           <br />
-          <h4>Tattoo good</h4>
+          <h4>Our aproach</h4>
           <p>
             {error ? "Error loading text." : data?.aboutText2 || "Loading..."}
           </p>
@@ -45,7 +45,7 @@ const About = () => {
           <img
             className="aboutImage"
             src={aboutImageUrl}
-            alt=""
+            alt="image of tattoo shop"
             loading="lazy"
           />
         </div>
